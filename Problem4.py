@@ -7,11 +7,17 @@
 # You can modify the input array in-place.
 
 arr = list(map(int, input().split()))
-arr = sorted([i for i in arr if i > 0])
-temp = 1
+# arr = sorted([i for i in arr if i > 0])
+# temp = 1
+s = set()
 for i in arr:
-    if temp in arr:
-        temp += 1
-    else:
-        print(temp)
+    if i > 0:
+        s.add(i)
+for i in range(1, max(arr)):
+    if i not in s:
+        print(i)
         break
+
+
+
+
